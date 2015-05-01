@@ -1,0 +1,67 @@
+.recipe-header {
+	min-height: 300px;
+	position: relative;
+	color:#fff;
+	.modal-title {
+		color:#444;
+	}
+	.modal-body {
+		padding:0;
+	}
+	textarea {
+		width: 100%;
+		border:none;
+		color:#444;
+		padding:10px;
+		margin:0;
+	}
+	.back-button {
+		float: left;
+		color:#fff;
+		font-size: 180%;
+		margin:3px 0;
+	}
+	h2{
+		font-weight: 100;
+		color:#fff;
+		font-size: 180%;
+		text-align: center;
+		max-width: 240px;
+		margin:10px auto;
+	}
+	.counts {
+		position:absolute;
+		bottom:10px;
+		left:10px;
+		li {
+			float: left;
+			margin-right:20px;
+			h3 {
+				font-weight: 100;
+			}
+			p {
+				color:@main;
+			}
+		}
+	}
+	.fork-btn, .unfork-btn, .book-btn, .unbook-btn {
+		position: absolute;
+		bottom:10px;
+		right:10px;
+		border-radius: 100px;
+		padding:0;
+		width: 40px;
+		height: 40px;
+		color:#fff;
+		&:hover {
+			color:#fff;
+		}
+		i {
+			font-size: 180%;
+		}
+	}
+	.book-btn {
+		right: 60px;
+	}
+}
+

@@ -1,0 +1,36 @@
+<template name="drawerLayout">
+	<div> 
+		{{#if currentUser}}
+		<header>
+			<div class="container-fluid">
+				<div class="menu">
+					<a href="#navDrawer"><span class="ion-navicon"> </span></a>
+				</div>
+				<h1>Recipes</h1>
+				<div class="mini-menu dropdown">
+					<button class="btn btn-main btn-clear dropdown-toggle" type="button" id="mini-menu" data-toggle="dropdown" aria-expanded="true">
+						<i class="ion-person"></i> 
+						<span class="caret"></span>
+					</button>
+					<ul class="dropdown-menu dropdown-menu-right" role="menu" aria-labelledby="mini-menu">
+						<li role="presentation"><a href="/profile/{{currentUser.username}}" role="menuitem" tabindex="-1">View Profile</a></li>
+						<li role="presentation"><a href="#" role="menuitem" tabindex="-1" class="edit-profile">Edit Profile</a></li>
+						<li role="presentation"><a href="#" role="menuitem" tabindex="-1" class="sign-out">Sign Out</a></li>
+					</ul>
+				</div>
+			</div>
+		</header>
+		{{/if}}
+		<article>
+			{{> yield}}
+		</article>
+		<div id="navDrawer">
+		    <ul>
+				<li><a href="/"><i class="glyphicon glyphicon-home"> Home</i></a></li>
+				<li><a href="/search"><i class="glyphicon glyphicon-search"> Search</i></a></li>
+				<li><a href="/add-new"><i class="glyphicon glyphicon-plus"> New</i></a></li>
+				<li><a href="/activity"><i class="glyphicon glyphicon-th-list"> Activity</i></a></li>
+		    </ul>
+		</div>
+	</div>	
+</template>
