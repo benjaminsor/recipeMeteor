@@ -1,22 +1,8 @@
 Accounts.ui.config({
-    passwordSignupFields: 'USERNAME_ONLY',
+    passwordSignupFields: 'USERNAME_AND_OPTIONAL_EMAIL',
     requestPermissions: {},
     extraSignupFields: 
     [
-        {
-            fieldName: 'email',
-            fieldLabel: 'Email',
-            inputType: 'text',
-            visible: true,
-            validate: function(value, errorFunction) {
-                if (!value) {
-                    errorFunction("Email is required!");
-                    return false;
-                } else {
-                    return true;
-                }
-            }
-        },
         {
             fieldName: 'firstName',
             fieldLabel: 'First Name',
